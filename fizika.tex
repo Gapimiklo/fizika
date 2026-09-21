@@ -1,0 +1,84 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[margin=2cm, top=2cm]{geometry}
+\usepackage{tikz}
+  \usetikzlibrary{angles, quotes}
+  \usetikzlibrary{arrows.meta}
+  \usetikzlibrary{positioning}
+\usepackage{pgfplots}
+  \pgfplotsset{compat=1.18}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{tocloft}
+  \renewcommand{\cftsecdotsep}{\cftdotsep}
+  \cftpagenumbersoff{subsection}
+\usepackage[normalem]{ulem}
+\usepackage{dashundergaps}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+
+\definecolor{defmain}{HTML}{218C7E}
+\definecolor{defbg}{HTML}{F4F8F7}
+\definecolor{rpmain}{HTML}{5341C8}
+\definecolor{rpbg}{HTML}{F5F5F8}
+\definecolor{zgmain}{HTML}{2969AE}
+\definecolor{zgbg}{HTML}{F4F6F8}
+
+\newtcolorbox{defbox}[2][]{
+    enhanced,
+    colback=defbg,
+    colframe=defmain,
+    arc=3mm,
+    boxrule=0.6pt,
+    leftrule=1mm,
+    before upper={\textbf{\sffamily\color{defmain}#2}\par},
+    #1
+}
+
+\newtcolorbox{rpbox}[2][]{
+    enhanced,
+    colback=rpbg,
+    colframe=rpmain,
+    arc=3mm,
+    boxrule=0.6pt,
+    leftrule=1mm,
+    before upper={\textbf{\sffamily\color{rpmain}#2}\par},
+    #1
+}
+
+\newtcolorbox{zgledbox}[2][]{
+    enhanced,
+    colback=zgbg,
+    colframe=zgmain,
+    arc=3mm,
+    boxrule=0.6pt,
+    leftrule=1mm,
+    before upper={\textbf{\sffamily\color{zgmain}#2}\par},
+    #1
+}
+
+\title{Zapiski FIZ 3. letnik}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Računanje z merskimi napakami}
+\begin{defbox}{Absolutna napaka}
+    \centering
+    Absolutna napaka je odstopanje dveh tretjin najmanjših odstopanj od povprečne vrednosti meritev. \\
+    \Large $X\ \mathrm{cm} \pm y\ \mathrm{cm}$
+\end{defbox}
+\begin{defbox}{Relativna napaka}
+    \centering{}
+    Relativna napaka je procent odstopanja dveh tretjin najmanjših odstopanj meritev od povprečne vrednosti vseh meritev. \\
+    \Large $X\ \mathrm{cm}(1 \pm \frac{y}{X})$
+\end{defbox}
+\centering
+Z merskimi napakami računamo tako, da pri seštevanju in odštevanju absolutne napake seštejemo,\\
+pri množenju in deljenju pa seštejemo relativne napake.
+
+\end{document}
